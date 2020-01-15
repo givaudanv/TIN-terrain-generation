@@ -113,28 +113,26 @@ public class TINMapGenerator : MonoBehaviour
                                 {
                                     using (StreamReader infoReader = new StreamReader(infoPath.OpenRead()))
                                     {
-                                        /*Vector2 dx = new Vector2(
+                                        Vector2 dx = new Vector2(
                                             float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture),
-                                            float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture));*/
-                                        float d = float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
-                                        //Debug.Log(d);
-                                        infoReader.ReadLine();
+                                            float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture));
+                                        /*float d = float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
+                                        infoReader.ReadLine();*/
                                         
                                         Vector2 dy = new Vector2(
                                             float.Parse(infoReader.ReadLine(),  System.Globalization.CultureInfo.InvariantCulture),
                                             float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture));
 
-                                        /*Vector2 offset = new Vector2(
+                                        Vector2 offset = new Vector2(
                                             float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture),
-                                            float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture));*/
-                                        double offx = double.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
+                                            float.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture));
+                                        /*double offx = double.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
                                         double offy = double.Parse(infoReader.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
-                                        Vector3 offset = new Vector3(offx, offy);
-                                        Debug.Log(offx);
+                                        Vector3 offset = new Vector3(offx, offy);*/
 
-                                        /*uvs.Add(ComputeUV(a, offset, dx, dy));
+                                        uvs.Add(ComputeUV(a, offset, dx, dy));
                                         uvs.Add(ComputeUV(b, offset, dx, dy));
-                                        uvs.Add(ComputeUV(c, offset, dx, dy));*/
+                                        uvs.Add(ComputeUV(c, offset, dx, dy));
                                     }
 
                                     meshRenderer.sharedMaterial.SetTexture("_MainTex",Resources.Load<Texture2D>(imagePath.FullName));
